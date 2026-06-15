@@ -108,3 +108,53 @@ onAuthStateChanged(auth, async (user) => {
     }
 
 });
+ordersContainer.innerHTML += `
+<div class="order-item">
+
+    <h5>
+        Water Can Order
+    </h5>
+
+    <p>
+        Quantity:
+        ${order.quantity}
+    </p>
+
+    <p>
+        Address:
+        ${order.address}
+    </p>
+
+    <p>
+        Date:
+        ${orderDate}
+    </p>
+
+    <span class="status-badge status-pending">
+
+        ${order.status}
+
+    </span>
+
+</div>
+`;
+ordersContainer.innerHTML = `
+<div class="empty-orders">
+
+    <h4>
+        No Orders Found
+    </h4>
+
+    <p>
+        Place your first water order today.
+    </p>
+
+    <a href="order.html"
+       class="btn hero-btn">
+
+       Order Now
+
+    </a>
+
+</div>
+`;

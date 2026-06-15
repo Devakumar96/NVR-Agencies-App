@@ -250,3 +250,49 @@ async ()=>{
     "admin-login.html";
 
 });
+ordersContainer.innerHTML += `
+
+<div class="admin-order-card">
+
+    <h5>
+        ${order.customerName}
+    </h5>
+
+    <p>
+        📱 ${order.mobile}
+    </p>
+
+    <p>
+        📍 ${order.address}
+    </p>
+
+    <p>
+        💧 Quantity:
+        ${order.quantity}
+    </p>
+
+    <p>
+        📧 ${order.customerEmail}
+    </p>
+
+    <div class="mt-3">
+
+        <button
+            class="btn btn-sm btn-delivered">
+
+            Delivered
+
+        </button>
+
+        <button
+            class="btn btn-sm btn-pending">
+
+            Pending
+
+        </button>
+
+    </div>
+
+</div>
+
+`;

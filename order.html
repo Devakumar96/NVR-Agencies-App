@@ -1,91 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Water Can</title>
+
+    <title>Order Water - NVR Agencies</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
 
-<div class="container mt-4">
+<body class="home-body">
 
-    <h2 class="text-center mb-4">
-        Order Water Can
-    </h2>
+    <!-- NAVBAR -->
 
-   <div class="card p-3 shadow-sm">
+    <nav class="navbar home-navbar">
 
-    <div class="mb-3">
+        <div class="container">
 
-        <label class="form-label">
-            Customer Name
-        </label>
+            <a href="index.html"
+               class="navbar-brand d-flex align-items-center text-decoration-none">
 
-        <input
-            type="text"
-            id="customerName"
-            class="form-control"
-            readonly>
+                <div class="nav-logo">
 
-    </div>
+                    <img src="assets/images/nvr-logo.jpeg"
+                         class="nav-logo-img"
+                         alt="NVR Logo">
 
-    <div class="mb-3">
+                </div>
 
-        <label class="form-label">
-            Mobile Number
-        </label>
+                <span class="brand-name">
+                    NVR Agencies
+                </span>
 
-        <input
-            type="text"
-            id="mobile"
-            class="form-control"
-            readonly>
+            </a>
 
-    </div>
+            <a href="index.html"
+               class="btn btn-sm btn-outline-dark">
 
-    <div class="mb-3">
+                Back
 
-        <label class="form-label">
-            Delivery Address
-        </label>
+            </a>
 
-        <textarea
-            id="address"
-            class="form-control"
-            rows="3"
-            readonly></textarea>
+        </div>
 
-    </div>
+    </nav>
 
-    <div class="mb-3">
+    <!-- HERO -->
 
-        <label class="form-label">
-            Quantity
-        </label>
+    <section class="container mt-4">
 
-        <input
-            type="number"
-            id="quantity"
-            class="form-control"
-            value="1"
-            min="1">
+        <div class="hero-card">
 
-    </div>
-    <button
-    id="placeOrderBtn"
-    class="btn btn-primary w-100 mt-3">
+            <h2>
+                💧 Order Water Can
+            </h2>
 
-    Place Order
+            <p>
+                Fresh Drinking Water Delivered To Your Doorstep
+            </p>
 
-</button>
+        </div>
 
-</div>
+    </section>
 
-<script type="module" src="js/orders.js"></script>
+    <!-- ORDER FORM -->
+
+    <section class="container mt-4 mb-5">
+
+        <div class="order-card">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Customer Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    class="form-control custom-input"
+                    readonly>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Mobile Number
+                </label>
+
+                <input
+                    type="text"
+                    id="mobile"
+                    class="form-control custom-input"
+                    readonly>
+
+            </div>
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Delivery Address
+                </label>
+
+                <textarea
+                    id="address"
+                    rows="3"
+                    class="form-control custom-input custom-textarea"
+                    readonly></textarea>
+
+            </div>
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Quantity
+                </label>
+
+                <input
+                    type="number"
+                    id="quantity"
+                    class="form-control custom-input"
+                    value="1"
+                    min="1">
+
+            </div>
+
+            <button
+                id="placeOrderBtn"
+                class="btn login-btn">
+
+                Place Order
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- PRODUCT PREVIEW -->
+
+    <section class="container mb-5">
+
+        <h4 class="mb-3">
+            Available Products
+        </h4>
+
+        <div class="row g-3">
+
+            <div class="col-md-4">
+
+                <div class="product-card">
+
+                    <div class="product-placeholder">
+
+                        Product Image
+
+                    </div>
+
+                    <h5>20L Water Can</h5>
+
+                    <p>Premium Drinking Water</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="product-card">
+
+                    <div class="product-placeholder">
+
+                        Product Image
+
+                    </div>
+
+                    <h5>Mineral Water</h5>
+
+                    <p>Coming Soon</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="product-card">
+
+                    <div class="product-placeholder">
+
+                        Product Image
+
+                    </div>
+
+                    <h5>Bulk Orders</h5>
+
+                    <p>Coming Soon</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer-section">
+
+        <div class="container text-center">
+
+            <h5>NVR Agencies</h5>
+
+            <p>
+                Trusted Drinking Water Delivery Service
+            </p>
+
+            <small>
+                © 2026 NVR Agencies. All Rights Reserved.
+            </small>
+
+        </div>
+
+    </footer>
+
+    <script type="module" src="js/orders.js"></script>
 
 </body>
+
 </html>

@@ -329,3 +329,690 @@ body{
     }
 
 }
+/* Logo Container */
+
+.logo-box{
+
+    width:110px;
+    height:110px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:var(--bg-card);
+
+    border:4px solid var(--accent-gold);
+
+    box-shadow:
+        0 10px 25px var(--shadow-medium);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* Logo Image */
+
+.logo-img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+/* ==========================
+   HOME PAGE
+========================== */
+
+.home-body{
+
+    background:var(--bg-main);
+
+}
+
+/* NAVBAR */
+
+.home-navbar{
+
+    background:var(--bg-card);
+
+    box-shadow:0 3px 15px var(--shadow-light);
+
+}
+
+.nav-logo{
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    margin-right:10px;
+
+    border:2px solid var(--accent-gold);
+
+}
+
+.nav-logo-img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.brand-name{
+
+    color:var(--primary-dark);
+
+    font-weight:700;
+
+}
+
+/* HERO */
+
+.hero-card{
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary),
+        var(--primary-light)
+    );
+
+    color:white;
+
+    border-radius:25px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    box-shadow:0 15px 30px var(--shadow-medium);
+
+}
+
+.hero-card h1{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+}
+
+.hero-btn{
+
+    background:var(--accent-gold);
+
+    color:var(--text-primary);
+
+    font-weight:700;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:15px;
+
+}
+
+/* ACTION CARDS */
+
+.action-card{
+
+    display:block;
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:25px 15px;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:var(--text-primary);
+
+    box-shadow:0 5px 15px var(--shadow-light);
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+.action-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.action-icon{
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+/* PRODUCTS */
+
+.product-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:center;
+
+    box-shadow:0 5px 15px var(--shadow-light);
+
+}
+
+.product-placeholder{
+
+    height:180px;
+
+    border-radius:15px;
+
+    background:var(--bg-section);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:15px;
+
+    color:var(--text-muted);
+
+}
+
+/* FOOTER */
+
+.footer-section{
+
+    background:var(--bg-dark);
+
+    color:white;
+
+    padding:40px 20px;
+
+}
+/* ==========================
+   ORDER PAGE
+========================== */
+
+.order-card{
+
+    background:var(--bg-card);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    box-shadow:
+        0 10px 25px var(--shadow-light);
+
+    border:1px solid var(--border-color);
+
+}
+
+.order-card .form-label{
+
+    color:var(--text-primary);
+
+    font-weight:600;
+
+}
+
+.order-card textarea{
+
+    resize:none;
+
+}
+
+.order-card .login-btn{
+
+    width:100%;
+
+}
+
+/* Readonly Inputs */
+
+.order-card input[readonly],
+.order-card textarea[readonly]{
+
+    background:var(--accent-cream);
+
+    border:2px solid var(--border-color);
+
+    color:var(--text-primary);
+
+}
+
+/* Quantity Highlight */
+
+#quantity{
+
+    font-weight:700;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+   MY ORDERS PAGE
+========================== */
+
+.orders-wrapper{
+
+    background:var(--bg-card);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    border:1px solid var(--border-color);
+
+    box-shadow:
+        0 10px 25px var(--shadow-light);
+
+}
+
+/* Order Count Badge */
+
+.order-count-badge{
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--accent-gold),
+        var(--accent-orange)
+    );
+
+    color:var(--text-primary);
+
+    font-size:14px;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+}
+
+/* Individual Order Card */
+
+.order-item{
+
+    background:var(--accent-cream);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:15px;
+
+    border-left:5px solid var(--primary);
+
+}
+
+/* Order Heading */
+
+.order-item h5{
+
+    color:var(--primary-dark);
+
+    font-weight:700;
+
+}
+
+/* Order Details */
+
+.order-item p{
+
+    margin-bottom:6px;
+
+    color:var(--text-secondary);
+
+}
+
+/* Status Badge */
+
+.status-badge{
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    display:inline-block;
+
+}
+
+/* Pending */
+
+.status-pending{
+
+    background:#FFF3CD;
+
+    color:#856404;
+
+}
+
+/* Delivered */
+
+.status-delivered{
+
+    background:#D4EDDA;
+
+    color:#155724;
+
+}
+
+/* Cancelled */
+
+.status-cancelled{
+
+    background:#F8D7DA;
+
+    color:#721C24;
+
+}
+
+/* Empty Orders */
+
+.empty-orders{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.empty-orders h4{
+
+    color:var(--text-primary);
+
+}
+
+.empty-orders p{
+
+    color:var(--text-muted);
+
+}
+/* ==========================
+   PROFILE PAGE
+========================== */
+
+.profile-card{
+
+    background:var(--bg-card);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    border:1px solid var(--border-color);
+
+    box-shadow:
+        0 10px 25px var(--shadow-light);
+
+}
+
+.profile-avatar{
+
+    width:100px;
+
+    height:100px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--accent-gold),
+        var(--accent-orange)
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:42px;
+
+    color:white;
+
+    box-shadow:
+        0 10px 25px var(--shadow-medium);
+
+}
+
+.profile-card .form-label{
+
+    font-weight:600;
+
+    color:var(--text-primary);
+
+}
+
+.profile-card input,
+.profile-card textarea{
+
+    border:2px solid var(--border-color);
+
+}
+
+.profile-card input:focus,
+.profile-card textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:none;
+
+}
+
+.profile-card input[readonly]{
+
+    background:var(--accent-cream);
+
+}
+
+.profile-card .login-btn{
+
+    width:100%;
+
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+    .profile-card{
+
+        padding:20px;
+
+    }
+
+    .profile-avatar{
+
+        width:80px;
+
+        height:80px;
+
+        font-size:34px;
+
+    }
+
+}
+.profile-logo{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+/* ==========================
+   ADMIN PAGE
+========================== */
+
+.admin-stat-card{
+
+    background:var(--bg-card);
+
+    border-radius:20px;
+
+    padding:20px;
+
+    text-align:center;
+
+    border:1px solid var(--border-color);
+
+    box-shadow:
+        0 8px 20px var(--shadow-light);
+
+}
+
+.admin-stat-card h3{
+
+    color:var(--primary);
+
+    font-size:28px;
+
+    font-weight:700;
+
+    margin-bottom:5px;
+
+}
+
+.admin-stat-card p{
+
+    margin:0;
+
+    color:var(--text-secondary);
+
+}
+
+/* Admin Order Card */
+
+.admin-order-card{
+
+    background:var(--accent-cream);
+
+    border-left:5px solid var(--primary);
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:15px;
+
+}
+
+.admin-order-card h5{
+
+    color:var(--primary-dark);
+
+    font-weight:700;
+
+}
+
+.admin-order-card p{
+
+    margin-bottom:6px;
+
+    color:var(--text-secondary);
+
+}
+
+/* Status Buttons */
+
+.btn-pending{
+
+    background:#FFF3CD;
+
+    color:#856404;
+
+    border:none;
+
+}
+
+.btn-delivered{
+
+    background:#D4EDDA;
+
+    color:#155724;
+
+    border:none;
+
+}
+
+.btn-cancelled{
+
+    background:#F8D7DA;
+
+    color:#721C24;
+
+    border:none;
+
+}
+/* Admin Login Logo */
+
+.logo-img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+}
+
+/* Admin Badge */
+
+.admin-badge{
+
+    background:var(--accent-gold);
+
+    color:var(--text-primary);
+
+    padding:6px 15px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
