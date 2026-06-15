@@ -138,7 +138,34 @@ placeOrderBtn.addEventListener("click", async () => {
             }
         );
 
-        alert("Order Placed Successfully");
+       
+
+        const adminNumber = "918098274492";
+
+const whatsappMessage =
+
+`🚚 NEW ORDER 
+
+Customer: ${customerName}
+
+Mobile: ${mobile}
+
+Quantity: ${quantity}
+
+Address: ${address}
+
+Status: Pending
+
+Order Time: ${new Date().toLocaleString()}
+
+Please process this order.`;
+
+ alert("Order Placed Successfully");
+
+window.location.href =
+`https://wa.me/${adminNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+
 
         // Clear form
         document.getElementById("customerName").value = "";
