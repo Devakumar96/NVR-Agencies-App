@@ -8,17 +8,17 @@ import {
 const welcomeText =
 document.getElementById("welcomeText");
 
-const logoutCard =
-document.querySelector(".logout-card");
+const logoutBtn =
+document.getElementById("logoutBtn");
 
 onAuthStateChanged(auth, (user) => {
 
-    if(user){
+    if (user) {
 
         welcomeText.innerHTML =
         `Welcome, ${user.email}`;
 
-    }else{
+    } else {
 
         window.location.href =
         "login.html";
@@ -27,22 +27,25 @@ onAuthStateChanged(auth, (user) => {
 
 });
 
-logoutCard.addEventListener("click",
-async ()=>{
+if (logoutBtn) {
 
-    try{
+    logoutBtn.addEventListener("click", async () => {
 
-        await signOut(auth);
+        try {
 
-        alert("Logged Out Successfully");
+            await signOut(auth);
 
-        window.location.href =
-        "login.html";
+            alert("Logged Out Successfully");
 
-    }catch(error){
+            window.location.href =
+            "login.html";
 
-        alert(error.message);
+        } catch (error) {
 
-    }
+            alert(error.message);
 
-});
+        }
+
+    });
+
+}
