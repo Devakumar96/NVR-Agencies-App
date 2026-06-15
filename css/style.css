@@ -91,26 +91,7 @@ body{
     background: var(--accent-gold);
     color: var(--text-light);
 }
-:root{
-    --gradient-primary: linear-gradient(
-        135deg,
-        #8B5E3C 0%,
-        #B07D52 50%,
-        #D4A017 100%
-    );
 
-    --gradient-dark: linear-gradient(
-        135deg,
-        #5E3D28 0%,
-        #8B5E3C 100%
-    );
-
-    --gradient-light: linear-gradient(
-        135deg,
-        #FFF4E6 0%,
-        #EFE6DD 100%
-    );
-}
 .menu-card{
     border-radius:20px;
     cursor:pointer;
@@ -128,4 +109,223 @@ body{
 #welcomeText{
     font-size:18px;
     font-weight:600;
+}
+/* ==========================
+   LOGIN PAGE
+========================== */
+
+.login-body{
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--primary),
+        var(--primary-light)
+    );
+
+    min-height:100vh;
+}
+
+/* Card */
+
+.login-card{
+
+    background:var(--bg-card);
+
+    border-radius:30px;
+
+    padding:35px 25px;
+
+    box-shadow:
+    0 20px 40px var(--shadow-medium);
+
+    border:1px solid var(--border-color);
+
+}
+
+/* Logo */
+
+.logo-box{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:40px;
+
+    color:var(--text-light);
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--accent-gold),
+        var(--accent-orange)
+    );
+
+    box-shadow:
+    0 10px 25px rgba(212,160,23,.4);
+
+}
+
+/* Title */
+
+.app-title{
+
+    margin-top:15px;
+
+    color:var(--text-primary);
+
+    font-weight:700;
+}
+
+.app-subtitle{
+
+    color:var(--text-secondary);
+
+    font-size:14px;
+}
+
+/* Inputs */
+
+.custom-input{
+
+    height:55px;
+
+    border-radius:15px;
+
+    border:2px solid var(--border-color);
+
+    background:var(--accent-cream);
+
+}
+
+.custom-input:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:none;
+
+    background:white;
+
+}
+
+/* Button */
+
+.login-btn{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:15px;
+
+    color:white;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--btn-primary),
+        var(--primary-light)
+    );
+
+    transition:.3s;
+
+}
+
+.login-btn:hover{
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--btn-primary-hover),
+        var(--primary)
+    );
+
+    transform:translateY(-2px);
+
+}
+
+/* Register */
+
+.register-text{
+
+    color:var(--text-secondary);
+}
+
+.register-link{
+
+    text-decoration:none;
+
+    color:var(--accent-gold);
+
+    font-weight:600;
+}
+
+.register-link:hover{
+
+    color:var(--btn-secondary-hover);
+}
+
+/* Mobile */
+
+@media(max-width:576px){
+
+    .login-card{
+
+        padding:25px 20px;
+
+        border-radius:25px;
+
+    }
+
+    .logo-box{
+
+        width:75px;
+        height:75px;
+
+        font-size:32px;
+    }
+
+    .app-title{
+
+        font-size:24px;
+    }
+
+}
+/* ==========================
+   REGISTER PAGE
+========================== */
+
+.custom-textarea{
+
+    min-height:100px;
+
+    resize:none;
+
+    padding-top:12px;
+
+}
+
+/* Better mobile spacing */
+
+@media(max-width:576px){
+
+    .custom-textarea{
+
+        min-height:90px;
+
+    }
+
 }

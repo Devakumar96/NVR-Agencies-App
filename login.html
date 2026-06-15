@@ -1,33 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>NVR Login</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NVR Agencies</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
-<body>
 
-<h2>Customer Login</h2>
+<body class="login-body">
 
-<input type="email" id="email" placeholder="Email">
-<br><br>
+    <div class="container-fluid">
 
-<input type="password" id="password" placeholder="Password">
-<br><br>
+        <div class="row min-vh-100 justify-content-center align-items-center">
 
-<button id="loginBtn">Login</button>
+            <div class="col-11 col-sm-10 col-md-6 col-lg-4">
 
-<div class="text-center mt-3">
+                <div class="login-card">
 
-    <p>
-        Don't have an account?
-    </p>
+                    <div class="text-center mb-4">
 
-    <a href="register.html"
-       class="btn btn-outline-primary">
-        Create Account
-    </a>
+                        <div class="logo-box">
+                            💧
+                        </div>
 
-</div>
-<script type="module" src="js/login.js"></script>
+                        <h2 class="app-title">
+                            NVR Agencies
+                        </h2>
+
+                        <p class="app-subtitle">
+                            Pure Drinking Water Delivery
+                        </p>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label class="form-label">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            class="form-control custom-input"
+                            placeholder="Enter your email">
+
+                    </div>
+
+                    <div class="mb-4">
+
+                        <label class="form-label">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            class="form-control custom-input"
+                            placeholder="Enter your password">
+
+                    </div>
+
+                    <button
+                        id="loginBtn"
+                        class="btn login-btn">
+
+                        Login
+
+                    </button>
+
+                    <div class="text-center mt-4">
+
+                        <span class="register-text">
+                            New Customer?
+                        </span>
+
+                        <br>
+
+                        <a href="register.html"
+                           class="register-link">
+
+                            Create Account
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="js/login.js"></script>
 
 </body>
+
 </html>

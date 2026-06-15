@@ -16,6 +16,16 @@ import {
 const registerBtn =
 document.getElementById("registerBtn");
 
+registerBtn.innerHTML =
+"Creating Account...";
+
+registerBtn.disabled = true;
+
+registerBtn.innerHTML =
+"Create Account";
+
+registerBtn.disabled = false;
+
 if(registerBtn){
 
 registerBtn.addEventListener("click",
