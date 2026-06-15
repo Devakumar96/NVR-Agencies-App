@@ -1,0 +1,131 @@
+:root {
+
+    /* ==========================
+       PRIMARY BRAND COLORS
+    ========================== */
+
+    --primary: #8B5E3C;          /* Rich Brown */
+    --primary-light: #B07D52;    /* Warm Brown */
+    --primary-dark: #5E3D28;     /* Deep Brown */
+
+    /* ==========================
+       ACCENT COLORS
+    ========================== */
+
+    --accent-gold: #D4A017;      /* Premium Gold */
+    --accent-orange: #FF9F43;    /* Bright Orange */
+    --accent-cream: #FFF4E6;     /* Soft Cream */
+
+    /* ==========================
+       BACKGROUNDS
+    ========================== */
+
+    --bg-main: #F8F5F1;          /* Main Background */
+    --bg-card: #FFFFFF;          /* Card Background */
+    --bg-section: #EFE6DD;       /* Section Background */
+    --bg-dark: #2E221B;          /* Dark Background */
+
+    /* ==========================
+       TEXT COLORS
+    ========================== */
+
+    --text-primary: #2E221B;
+    --text-secondary: #6B5B52;
+    --text-light: #FFFFFF;
+    --text-muted: #9E8E83;
+
+    /* ==========================
+       BUTTON COLORS
+    ========================== */
+
+    --btn-primary: #8B5E3C;
+    --btn-primary-hover: #74492A;
+
+    --btn-secondary: #D4A017;
+    --btn-secondary-hover: #B8870F;
+
+    /* ==========================
+       STATUS COLORS
+    ========================== */
+
+    --success: #28A745;
+    --warning: #FFC107;
+    --danger: #DC3545;
+    --info: #17A2B8;
+
+    /* ==========================
+       BORDERS & SHADOWS
+    ========================== */
+
+    --border-color: #E3D5C7;
+    --shadow-light: rgba(139, 94, 60, 0.15);
+    --shadow-medium: rgba(139, 94, 60, 0.25);
+
+}
+
+body{
+    background: var(--bg-main);
+    color: var(--text-primary);
+}
+
+.header{
+    background: var(--primary);
+    color: var(--text-light);
+}
+
+.card{
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+.btn-primary{
+    background: var(--btn-primary);
+    color: var(--text-light);
+}
+
+.btn-primary:hover{
+    background: var(--btn-primary-hover);
+}
+
+.btn-gold{
+    background: var(--accent-gold);
+    color: var(--text-light);
+}
+:root{
+    --gradient-primary: linear-gradient(
+        135deg,
+        #8B5E3C 0%,
+        #B07D52 50%,
+        #D4A017 100%
+    );
+
+    --gradient-dark: linear-gradient(
+        135deg,
+        #5E3D28 0%,
+        #8B5E3C 100%
+    );
+
+    --gradient-light: linear-gradient(
+        135deg,
+        #FFF4E6 0%,
+        #EFE6DD 100%
+    );
+}
+.menu-card{
+    border-radius:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.menu-card:hover{
+    transform:translateY(-5px);
+}
+
+.logout-card{
+    cursor:pointer;
+}
+
+#welcomeText{
+    font-size:18px;
+    font-weight:600;
+}
