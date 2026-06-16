@@ -67,6 +67,7 @@ body{
     background: var(--bg-main);
     color: var(--text-primary);
     overflow-x:hidden;
+     padding-bottom: 90px;
 }
 
 .header{
@@ -1285,4 +1286,214 @@ filter: brightness(0) invert(1);
 }
 
 
+}
+
+/* ==========================================
+MOBILE APP FOOTER
+========================================== */
+
+.mobile-footer{
+
+
+position:fixed;
+bottom:0;
+left:0;
+
+width:100%;
+height:75px;
+z-index:9999;
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+background:var(--bg-card);
+
+border-top:1px solid var(--border-color);
+
+box-shadow:
+    0 -4px 20px var(--shadow-light);
+
+}
+
+/* ==========================================
+FOOTER ITEM
+========================================== */
+
+.footer-item{
+
+
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+
+text-decoration:none;
+
+color:var(--text-muted);
+
+transition:all .3s ease;
+
+min-width:60px;
+
+
+}
+
+.footer-item i{
+
+
+font-size:1.4rem;
+margin-bottom:4px;
+
+
+}
+
+.footer-item span{
+
+
+font-size:.72rem;
+font-weight:600;
+
+
+}
+
+/* ==========================================
+HOVER EFFECT
+========================================== */
+
+.footer-item:hover{
+
+
+color:var(--primary);
+
+transform:translateY(-3px);
+
+
+}
+
+/* ==========================================
+ACTIVE BUTTON (CENTER HOME)
+========================================== */
+
+.footer-item.active{
+
+
+width:65px;
+height:65px;
+
+background:linear-gradient(
+    135deg,
+    var(--primary),
+    var(--primary-light)
+);
+
+color:var(--text-light);
+
+border-radius:50%;
+
+margin-top:-30px;
+
+border:4px solid var(--bg-card);
+
+box-shadow:
+    0 8px 25px var(--shadow-medium);
+
+
+}
+
+.footer-item.active i{
+
+
+font-size:1.5rem;
+
+
+}
+
+.footer-item.active span{
+
+
+color:var(--text-light);
+
+
+}
+
+/* ==========================================
+ICON COLORS
+========================================== */
+
+.footer-profile{
+
+
+color:var(--primary);
+
+
+}
+
+.footer-orders{
+
+
+color:var(--accent-gold);
+
+
+}
+
+.footer-products{
+
+
+color:var(--accent-orange);
+
+
+}
+
+.footer-logout{
+
+
+color:var(--danger);
+
+
+}
+
+/* ==========================================
+BODY SPACING
+========================================== */
+
+body{
+
+
+padding-bottom:90px;
+
+
+}
+
+/* ==========================================
+DESKTOP HIDE
+========================================== */
+
+@media(min-width:992px){
+
+
+.mobile-footer{
+
+    display:none;
+}
+
+
+}
+/* Desktop */
+
+@media (min-width: 992px){
+
+    .mobile-footer{
+
+        display: none !important;
+    }
+}
+
+/* Mobile & Tablet */
+
+@media (max-width: 991.98px){
+
+    .mobile-footer{
+
+        display: flex;
+    }
 }
