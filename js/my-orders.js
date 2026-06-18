@@ -15,6 +15,7 @@ import {
 const ordersContainer =
 document.getElementById("ordersContainer");
 
+
 onAuthStateChanged(auth, async (user) => {
 
     if (!user) {
@@ -54,42 +55,66 @@ onAuthStateChanged(auth, async (user) => {
 
             html += `
             
-            <div class="card shadow-sm mb-3">
+          <div class="order-item">
 
-                <div class="card-body">
+    <div class="order-top">
 
-                    <h5>
-                        💧 ${order.quantity} Water Can(s)
-                    </h5>
+        <img
+            src="assets/images/water-can.png"
+            alt="Water Can"
+            class="order-product-img">
 
-                    <p>
-                        <strong>Name:</strong>
-                        ${order.customerName}
-                    </p>
+        <div class="order-details">
 
-                    <p>
-                        <strong>Mobile:</strong>
-                        ${order.mobile}
-                    </p>
+            <h5>
+                💧 ${order.quantity} Water Can(s)
+            </h5>
 
-                    <p>
-                        <strong>Address:</strong>
-                        ${order.address}
-                    </p>
+            <p>
+                ${order.customerName}
+            </p>
 
-                    <p>
-                        <strong>Status:</strong>
+            <p>
+                ${order.mobile}
+            </p>
 
-                        <span class="badge bg-primary">
-                            ${order.status}
-                        </span>
-                    </p>
+        </div>
 
-                </div>
+    </div>
 
-            </div>
+    <hr>
 
-            `;
+    <p>
+
+        <strong>Address:</strong>
+
+        ${order.address}
+
+    </p>
+
+    <div class="d-flex justify-content-between align-items-center">
+
+        <span class="badge bg-primary">
+
+            ${order.status}
+
+        </span>
+
+        <a
+            href="tel:8098274492"
+            class="btn btn-sm btn-success">
+
+            <i class="bi bi-telephone-fill"></i>
+
+            Contact
+
+        </a>
+
+    </div>
+
+</div>
+
+`;
 
         });
 
@@ -109,52 +134,92 @@ onAuthStateChanged(auth, async (user) => {
 
 });
 ordersContainer.innerHTML += `
+
 <div class="order-item">
 
-    <h5>
-        Water Can Order
-    </h5>
+    <div class="order-top">
 
-    <p>
-        Quantity:
-        ${order.quantity}
-    </p>
+        <img
+            src="assets/images/water-can.png"
+            alt="Water Can"
+            class="order-product-img">
 
-    <p>
-        Address:
+        <div class="order-details">
+
+            <h5>
+                Water Can Order
+            </h5>
+
+            <p>
+                Qty: ${order.quantity}
+            </p>
+
+            <p>
+                ${orderDate}
+            </p>
+
+        </div>
+
+        <span class="status-badge status-pending">
+
+            ${order.status}
+
+        </span>
+
+    </div>
+
+    <hr>
+
+    <p class="order-address">
+
+        <i class="bi bi-geo-alt-fill"></i>
+
         ${order.address}
+
     </p>
 
-    <p>
-        Date:
-        ${orderDate}
-    </p>
+    <div class="order-actions">
 
-    <span class="status-badge status-pending">
+        <a
+            href="tel:8098274492"
+            class="btn btn-call">
 
-        ${order.status}
+            <i class="bi bi-telephone-fill"></i>
 
-    </span>
+            Contact for Order
+
+        </a>
+
+    </div>
 
 </div>
+
 `;
+
 ordersContainer.innerHTML = `
+
 <div class="empty-orders">
+
+    <img
+        src="assets/images/no-orders.png"
+        class="empty-order-img">
 
     <h4>
         No Orders Found
     </h4>
 
     <p>
-        Place your first water order today.
+        Start shopping and place your first order.
     </p>
 
-    <a href="order.html"
-       class="btn hero-btn">
+    <a
+        href="shop.html"
+        class="btn hero-btn">
 
-       Order Now
+        Shop Now
 
     </a>
 
 </div>
+
 `;
