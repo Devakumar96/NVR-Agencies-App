@@ -1758,7 +1758,11 @@ DESKTOP HIDE
     box-shadow:
     0 12px 25px var(--shadow-medium);
 }
+.selected-product-card{
 
+    position: relative;
+
+}
 .product-badge{
 
     position:absolute;
