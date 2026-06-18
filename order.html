@@ -76,60 +76,63 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
     <!-- PRODUCT PREVIEW -->
 
-    <section class="container my-5">
+   <section class="container my-5">
 
     <div class="row g-4 align-items-stretch">
 
         <!-- PRODUCT PREVIEW -->
 
-        <div class="col-lg-6">
+       <div class="col-lg-6">
 
-            <div class="selected-product-card ">
+    <div class="selected-product-card">
 
-                <div class="product-image-wrapper">
+        <div class="product-image-wrapper">
 
-                    <img
-                        id="selectedProductImage"
-                        src="assets/images/water-can.png"
-                        alt="20L Water Can"
-                        class="selected-product-img">
-
-                </div>
-
-                <div class="mt-4">
-
-                    <span class="product-badge">
-                        BEST SELLER
-                    </span>
-
-                    <h2 class="mt-3">
-                        20L Water Can
-                    </h2>
-
-                    <p class="product-description">
-
-                        Pure, clean and safe drinking water delivered
-                        directly to your doorstep.
-
-                    </p>
-
-                    <div class="product-features">
-
-                        <div>✅ Premium Quality Water</div>
-
-                        <div>✅ Fast Delivery</div>
-
-                        <div>✅ Hygienic Packaging</div>
-
-                        <div>✅ Trusted Service</div>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <img
+                id="selectedProductImage"
+                src="assets/images/water-can.png"
+                alt="Product"
+                class="selected-product-img">
 
         </div>
+
+        <div class="product-content">
+
+            <span class="product-badge">
+
+                Available
+
+            </span>
+
+            <h2
+                id="selectedProductName"
+                class="product-title">
+
+                20L Water Can
+
+            </h2>
+
+            <h3
+                id="selectedProductPrice"
+                class="product-price">
+
+                ₹40
+
+            </h3>
+
+            <p
+                id="selectedProductDescription"
+                class="product-description">
+
+                Premium purified drinking water delivered safely to your doorstep.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
 
         <!-- ORDER FORM -->
 
@@ -138,8 +141,11 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
             <div class="order-card h-100">
 
                 <h4 class="mb-4">
+
                     Place Your Order
+
                 </h4>
+
 
                 <div class="mb-3">
 
@@ -183,7 +189,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
                 </div>
 
-                <div class="mb-4">
+                <div class="mb-3">
 
                     <label class="form-label">
                         Quantity
@@ -195,6 +201,20 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
                         class="form-control custom-input"
                         value="1"
                         min="1">
+
+                </div>
+
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Total Amount
+                    </label>
+
+                    <input
+                        type="text"
+                        id="totalAmount"
+                        class="form-control custom-input fw-bold"
+                        readonly>
 
                 </div>
 

@@ -83,6 +83,89 @@ onAuthStateChanged(auth, async (user) => {
     }
 
 });
+
+
+const selectedProduct =
+JSON.parse(
+    localStorage.getItem(
+        "selectedProduct"
+    )
+);
+const quantityInput =
+document.getElementById("quantity");
+
+const totalAmountInput =
+document.getElementById("totalAmount");
+
+function updateTotalAmount(){
+
+    if(!selectedProduct){
+
+        console.log("No product selected");
+
+        return;
+    }
+
+    const quantity =
+    parseInt(quantityInput.value) || 1;
+
+    const price =
+    parseFloat(selectedProduct.price) || 0;
+
+    const total =
+    quantity * price;
+
+    totalAmountInput.value =
+    "₹" + total;
+
+    console.log(
+        "Qty:",
+        quantity,
+        "Price:",
+        price,
+        "Total:",
+        total
+    );
+}
+
+quantityInput.addEventListener(
+    "input",
+    updateTotalAmount
+);
+
+quantityInput.addEventListener(
+    "keyup",
+    updateTotalAmount
+);
+
+updateTotalAmount();
+console.log(selectedProduct);
+
+if(selectedProduct){
+
+    document.getElementById(
+        "selectedProductImage"
+    ).src =
+    selectedProduct.image;
+
+    document.getElementById(
+        "selectedProductName"
+    ).textContent =
+    selectedProduct.name;
+
+    document.getElementById(
+        "selectedProductPrice"
+    ).textContent =
+    "₹" + selectedProduct.price;
+
+    document.getElementById(
+        "selectedProductDescription"
+    ).textContent =
+    selectedProduct.description;
+
+}
+
+
 // Place order
 placeOrderBtn.addEventListener("click", async () => {
 

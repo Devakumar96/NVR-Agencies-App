@@ -194,11 +194,17 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
                         </div>
 
-                        <button
-                            class="btn product-btn"
-                            onclick="window.location.href='order.html'">
+                                                <button
+                        class="btn product-btn"
 
-                            Order Now
+                        onclick="selectProduct(
+                        '20L Water Can',
+                        40,
+                        'Premium purified drinking water delivered safely to your doorstep.',
+                        'assets/images/water-can.png'
+                        )">
+
+                        Order Now
 
                         </button>
 
@@ -247,7 +253,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
                             <span class="product-price">
 
-                                ₹40
+                                ₹20
 
                             </span>
 
@@ -259,11 +265,17 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
                         </div>
 
-                        <button
-                            class="btn product-btn"
-                            onclick="window.location.href='order.html'">
+                          <button
+                        class="btn product-btn"
 
-                            Order Now
+                        onclick="selectProduct(
+                        '10L Water bottle',
+                        20,
+                        'Premium purified drinking water delivered safely to your doorstep.',
+                        'assets/images/water-bottle.png'
+                        )">
+
+                        Order Now
 
                         </button>
 
@@ -876,7 +888,7 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
     <i class="bi bi-person-fill"></i>
 
-    <span></span>
+    <span>Profile</span>
 
 </a>
 
@@ -893,10 +905,32 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.m
 
 </div>
 
+<script>
 
+function selectProduct(
+    name,
+    price,
+    description,
+    image
+){
 
+    localStorage.setItem(
+        "selectedProduct",
+        JSON.stringify({
+            name,
+            price,
+            description,
+            image
+        })
+    );
+
+    window.location.href =
+    "order.html";
+}
+
+</script>
     <script type="module"
-            src="js/profile.js"></script>
+            src="js/orders.js"></script>
              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
