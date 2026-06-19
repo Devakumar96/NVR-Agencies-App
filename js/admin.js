@@ -250,49 +250,154 @@ async ()=>{
     "admin-login.html";
 
 });
-ordersContainer.innerHTML += `
 
-<div class="admin-order-card">
 
-    <h5>
-        ${order.customerName}
-    </h5>
+    // <div class="mt-3">
 
-    <p>
-        📱 ${order.mobile}
-    </p>
+    //     <button
+    //         class="btn btn-sm btn-delivered">
 
-    <p>
-        📍 ${order.address}
-    </p>
+    //         Delivered
 
-    <p>
-        💧 Quantity:
-        ${order.quantity}
-    </p>
+    //     </button>
 
-    <p>
-        📧 ${order.customerEmail}
-    </p>
+    //     <button
+    //         class="btn btn-sm btn-pending">
 
-    <div class="mt-3">
+    //         Pending
 
-        <button
-            class="btn btn-sm btn-delivered">
+    //     </button>
 
-            Delivered
+    // </div>
 
-        </button>
 
-        <button
-            class="btn btn-sm btn-pending">
+const downloadPdfBtn =
+document.getElementById(
+    "downloadPdfBtn"
+);
 
-            Pending
+downloadPdfBtn.addEventListener(
+    "click",
+    async () => {
 
-        </button>
+        const { jsPDF } =
+        window.jspdf;
 
-    </div>
+        const pdf =
+        new jsPDF();
 
-</div>
+        pdf.setFontSize(20);
 
-`;
+        pdf.text(
+            "NVR Agencies Report",
+            20,
+            20
+        );
+
+        pdf.setFontSize(12);
+
+        pdf.text(
+            `Generated: ${new Date().toLocaleString()}`,
+            20,
+            30
+        );
+
+        const customersSnapshot =
+        await getDocs(
+            collection(db, "customers")
+        );
+
+        const ordersSnapshot =
+        await getDocs(
+            collection(db, "orders")
+        );
+
+        pdf.text(
+            `Total Customers: ${customersSnapshot.size}`,
+            20,
+            50
+        );
+
+        pdf.text(
+            `Total Orders: ${ordersSnapshot.size}`,
+            20,
+            60
+        );
+
+        let y = 90;
+
+        pdf.setFontSize(14);
+
+        pdf.text(
+            "Orders List",
+            20,
+            y
+        );
+
+        y += 15;
+
+        pdf.setFontSize(10);
+
+        ordersSnapshot.forEach((doc) => {
+
+            const order =
+            doc.data();
+
+            if (y > 270) {
+
+                pdf.addPage();
+
+                y = 20;
+
+            }
+
+            pdf.text(
+
+                `${order.customerName || "N/A"} | ${order.mobile || ""}`,
+
+                20,
+
+                y
+
+            );
+
+            y += 8;
+
+            pdf.text(
+
+                `Qty: ${order.quantity || 0} | Status: ${order.status || "Pending"}`,
+
+                20,
+
+                y
+
+            );
+
+            y += 12;
+
+        });
+
+        pdf.save(
+            "NVR-Agencies-Report.pdf"
+        );
+
+    }
+);
+
+// const downloadPdfBtn =
+// document.getElementById(
+//     "downloadPdfBtn"
+// );
+
+// if(downloadPdfBtn){
+
+//     downloadPdfBtn.addEventListener(
+//         "click",
+//         async ()=>{
+
+//             // PDF CODE HERE
+
+//         }
+//     );
+
+// }
