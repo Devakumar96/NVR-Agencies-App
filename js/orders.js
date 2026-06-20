@@ -182,11 +182,16 @@ placeOrderBtn.addEventListener("click", async () => {
     const mobile =
         document.getElementById("mobile").value.trim();
 
+        
+
     const address =
         document.getElementById("address").value.trim();
 
     const quantity =
         document.getElementById("quantity").value;
+
+        const totalAmount = 
+        document.getElementById("totalAmount").value.replace("₹", "").trim();
 
     // Validation
     if (
@@ -212,9 +217,10 @@ placeOrderBtn.addEventListener("click", async () => {
                 customerName: customerName,
                 mobile: mobile,
                 address: address,
-
+               
                 quantity: Number(quantity),
-
+                
+                totalAmount : Number(quantity) * Number(selectedProduct.price),
                 status: "Pending",
 
                 createdAt: serverTimestamp()
@@ -227,19 +233,24 @@ placeOrderBtn.addEventListener("click", async () => {
 
 const whatsappMessage =
 
-`🚚 NEW ORDER 
+`🚚 NEW ORDER
 
-Customer: ${customerName}
+👤 Customer: ${customerName}
 
-Mobile: ${mobile}
+📱 Mobile: ${mobile}
 
-Quantity: ${quantity}
 
-Address: ${address}
+📦 Quantity: ${quantity}
 
-Status: Pending
+💵 Total Amount: ₹${totalAmount}
 
-Order Time: ${new Date().toLocaleString()}
+📍 Address:
+${address}
+
+📌 Status: Pending
+
+🕒 Order Time:
+${new Date().toLocaleString()}
 
 Please process this order.`;
 
